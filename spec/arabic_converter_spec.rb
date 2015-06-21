@@ -1,8 +1,15 @@
 #!/usr/bin/env ruby
+require_relative "../arabic_converter"
 
 describe TestProject do
 	describe "Convert Arabic numerals to English numerals" do
 		subject {testproject}
+
+		context "Arabic numeral to English numeral: Below 100" do
+			let(:testproject) { TestProject.new(:num => 72) }
+
+			specify { expect(subject.arabic_to_eng).to eq("seventy two")}
+		end
 
 		context "Arabic numeral to English numeral: Below 20" do
 			let(:testproject) { TestProject.new(:num => 12) }
