@@ -5,13 +5,13 @@ describe TestProject do
 	describe "Convert Arabic numerals to English numerals" do
 		subject {testproject}
 
-		context "Arabic numeral to English numeral(ex.1): Below 1000" do
-			let(:testproject) { TestProject.new(:num => 537) }
+		context "Arabic numeral to English numeral: Above 1000" do
+			let(:testproject) { TestProject.new(:num => 1537) }
 
-			specify { expect(subject.arabic_to_eng).to eq("five hundred thirty seven")}
+			specify { expect(subject.arabic_to_eng).to eq("one thousand five hundred thirty seven")}
 		end
 
-		context "Arabic numeral to English numeral(ex.2): Below 1000" do
+		context "Arabic numeral to English numeral: Below 1000" do
 			let(:testproject) { TestProject.new(:num => 909) }
 
 			specify { expect(subject.arabic_to_eng).to eq("nine hundred nine")}
