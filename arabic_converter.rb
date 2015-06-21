@@ -29,6 +29,9 @@ class TestProject
 		when 1..999
 			convert_smaller_than_thousand(@num)
 
+		else
+			convert_larger_than_thousand(@num)
+
 		end
 		final_result
 
@@ -60,6 +63,31 @@ class TestProject
 			
 		else
 			convert_hundred(val)
+
+		end
+	end
+
+	## convert numbers greater than and equal to 1000 to english numerals ##
+	def convert_larger_than_thousand(val)
+		return if val == 0
+
+		#exponent of the input number
+		exp = (Math.log10(val)).to_i.abs
+
+		exp_available = 3*(exp/3) 
+		exp_num = 10**exp_available
+
+		while exp_available >= 0
+			if val >= exp_num
+				v1 = val/exp_num
+				val -= v1*exp_num
+
+				convert_smaller_than_thousand(v1)
+				set_exponent(exp_available)
+				convert_larger_than_thousand(val)
+			end
+
+			exp_available -= 3
 
 		end
 	end
