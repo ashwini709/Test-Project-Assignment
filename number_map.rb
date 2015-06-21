@@ -4,7 +4,6 @@ module NumberMap
 
 	## Map for unique numbers ##
 	BASIC_MAP = {
-		0 => 'zero',
 		1 => 'one',
 		2 => 'two',
 		3 => 'three',
@@ -23,7 +22,15 @@ module NumberMap
 		16 => 'sixteen',
 		17 => 'seventeen',
 		18 => 'eighteen',
-		19 => 'nineteen'
+		19 => 'nineteen',
+		20 => 'twenty',
+		30 => 'thirty',
+		40 => 'forty',
+		50 => 'fifty',
+		60 => 'sixty',
+		70 => 'seventy',
+		80 => 'eighty',
+		90 => 'ninety'		
 	}
 
 end

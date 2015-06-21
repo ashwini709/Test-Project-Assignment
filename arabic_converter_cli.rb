@@ -4,7 +4,7 @@ require_relative "arabic_converter"
 ## Command line input interface ##
 if ARGV[0] 
 	begin
-		val = Integer(ARGV[0])
+		val = Integer(ARGV[0], 10)
 		testproject = TestProject.new(:num => val)
 		testproject.arabic_to_eng		
 	rescue ArgumentError
