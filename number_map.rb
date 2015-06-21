@@ -33,4 +33,9 @@ module NumberMap
 		90 => 'ninety'		
 	}
 
+	## Map for exponents ##
+	EXPONENTS = {
+		2 => 'hundred'
+	}
+
 end
