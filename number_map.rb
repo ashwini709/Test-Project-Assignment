@@ -33,4 +33,32 @@ module NumberMap
 		90 => 'ninety'		
 	}
 
+	## Map for exponents( Considering American numerals) ##
+	EXPONENTS = {
+		2 => 'hundred',
+		3 => 'thousand',
+		6 => 'million',
+		9 => 'billion',
+		12 => 'trillion',
+		15 => 'quadrillion',
+		18 => 'quintillion',
+		21 => 'sexillion',
+		24 => 'septillion',
+		27 => 'octillion',
+		30 => 'nonillion',
+		33 => 'decillion',
+		36 => 'undecillion',
+		39 => 'duodecillion',
+		42 => 'tredecillion',
+		45 => 'quattuordecillion',
+		48 => 'quindecillion',
+		51 => 'sexdecillion',
+		54 => 'septendecillion',
+		57 => 'octodecillion',
+		60 => 'novemdecillion',
+		63 => 'vigintillion',
+		66 => 'unvigintillion',
+		69 => 'duovigintillion'
+	}
+
 end
